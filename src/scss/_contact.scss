@@ -1,0 +1,150 @@
+.section {
+
+  // .section__contact
+
+  &__contact {
+    margin-top: 150px;
+
+    @media (max-width: $breakpoint768) {
+      margin-top: 50px;
+    }
+  }
+}
+
+.contact {
+
+  // .contact__inner
+
+  &__inner {
+    display: flex;
+    gap: 100px;
+
+    @media (max-width: $breakpoint992) {
+      gap: 50px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @media (max-width: $breakpoint768) {
+      gap: 20px;
+    }
+  }
+
+  // .contact__img
+
+  &__img {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // .contact__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  // .contact__title
+
+  &__title {
+    margin-bottom: 35px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 3px;
+    }
+  }
+
+  // .contact__text
+
+  &__text {
+    font-size: 20px;
+    line-height: 150%;
+    color: $textColor;
+    margin-bottom: 50px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+    }
+  }
+
+  // .contact__form
+
+  &__form {}
+
+  // .contact__input
+
+  &__input {
+    border: 1px solid #8F95A5;
+    border-radius: 10px;
+    padding: 32px 10px 25px 30px;
+    width: 55%;
+
+    ::placeholder {
+      font-size: 16px;
+      line-height: 150%;
+      color: $textColor;
+
+      @media (max-width: $breakpoint992) {
+        font-size: 14px;
+      }
+    }
+
+    margin-right: 10px;
+
+    @media (max-width: $breakpoint768) {
+      margin-right: 0;
+      padding: 25px 10px 20px 20px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .contact__button
+
+  &__button {
+    padding: 25px 80px;
+    background: #263238;
+    border-radius: 10px;
+    color: $btncolor;
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: 500;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+      padding: 24px 55px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 18px 45px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      display: block;
+      width: 100%;
+    }
+
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color,
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s background-color,
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s outline;
+
+    &:hover {
+      color: $titleColor;
+      background-color: $btncolor;
+      outline: 1px solid $titleColor;
+    }
+  }
+}

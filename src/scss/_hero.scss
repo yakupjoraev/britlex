@@ -1,0 +1,146 @@
+.section {
+
+  // .section__hero
+
+  &__hero {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    @media (max-width: 700px) {
+      padding-top: 0;
+      padding-bottom: 90px;
+      text-align: center;
+    }
+  }
+}
+
+.hero {
+
+  // .hero__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      column-gap: 0;
+    }
+  }
+
+  // .hero__content
+
+  &__content {
+    flex: 0 1 40%;
+
+    @media (max-width: 700px) {
+      order: 2;
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    color: $titleColor;
+    margin-bottom: 40px;
+    font-size: 64px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 25px;
+      font-size: 48px;
+      line-height: 133%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 36px;
+      line-height: 125%;
+    }
+
+    @media (max-width: 700px) {
+      br {
+        display: none;
+      }
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+  }
+
+  // .hero__text
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    color: $textColor;
+    margin-bottom: 60px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 14px;
+      
+  }
+  }
+
+  // .hero__button
+
+  &__button {
+    display: inline-flex;
+    white-space: nowrap;
+    color: $btncolor;
+    font-size: 36px;
+    line-height: 150%;
+    padding: 32px 118px;
+    background-color: $backgroundColor;
+    border-radius: 15px;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color, cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s background-color, cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s outline;
+    &:hover {
+      color: $titleColor;
+      background-color:$btncolor;
+      outline: 1px solid $titleColor;
+    }
+
+    @media (max-width: $breakpoint992) {
+      padding: 22px 78px;
+      font-size: 24px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 19px 67px;
+      font-size: 18px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 16px;
+      width: 100%;
+      justify-content: center;
+  }
+  }
+
+  // .hero__img
+
+  &__img {
+
+    // flex: 0 1 40%;
+    @media (max-width: 700px) {
+      order: 1;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
